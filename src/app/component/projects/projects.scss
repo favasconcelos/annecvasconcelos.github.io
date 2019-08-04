@@ -1,0 +1,19 @@
+#projects {
+  max-width: 100%;
+  min-height: calc(100vh - 6em);
+  background-color: #fff;
+
+  padding: 2em 3em;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 31.33%;
+    height: 200px;
+    margin: 0 1% 20px;
+  }
+}

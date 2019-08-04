@@ -1,0 +1,15 @@
+#header {
+  width: 100%;
+  height: 6em;
+  background: #f7f7f7;
+  border-bottom: 1px solid #999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-style: italic;
+    font-weight: 300;
+  }
+}
