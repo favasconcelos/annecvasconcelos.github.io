@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
   return (
     <div id="projects">
       {PROJECTS.map(project => {
-        return <Card />;
+        return <Card key={project.title} />;
       })}
     </div>
   );
