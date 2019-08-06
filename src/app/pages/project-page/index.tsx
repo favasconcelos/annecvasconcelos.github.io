@@ -1,20 +1,25 @@
 import React from 'react';
-import { match } from 'react-router-dom';
+import { RouteComponentProps } from '@reach/router';
 //local
 import Page from '../../component/page';
+import ProjectView from '../../component/project-view';
+import { getProjectByID } from '../../services/projects';
 
-interface Params {
-  id: string;
+interface OwnsProps extends RouteComponentProps {
+  projectID?: string;
 }
 
-type OwnsProps = {
-  match?: match<Params>;
-};
-
 const ProjectPage: React.FC<OwnsProps> = props => {
+  const project = getProjectByID(props.projectID);
+
+  if (!project) {
+    return null;
+  }
+
+  const pageTitle = `${project.title} (${project.year})`;
   return (
-    <Page id="project" title="Project">
-      <pre>{JSON.stringify(props, null, 2)}</pre>
+    <Page title={pageTitle}>
+      <ProjectView data={project} />
     </Page>
   );
 };

@@ -1,18 +1,18 @@
 import React, { ReactNode } from 'react';
 //local
+import './page.scss';
 import Header from '../header';
 
-type OwnsProps = {
-  id: string;
+interface OwnsProps {
   title: string;
   children?: ReactNode;
-};
+}
 
-const Page: React.FC<OwnsProps> = (props: OwnsProps) => {
+const Page: React.FC<OwnsProps> = props => {
   return (
-    <div id={props.id} className="page">
+    <div className="page">
       <Header title={props.title} />
-      {props.children}
+      <div id="body">{props.children}</div>
     </div>
   );
 };

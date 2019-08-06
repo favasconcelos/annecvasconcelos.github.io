@@ -2,14 +2,15 @@ import React from 'react';
 //local
 import './card.scss';
 
-type OwnProps = {
+type OwnsProps = {
   img: string;
   title: string;
+  onClick: Function;
 };
 
-const Card: React.FC<OwnProps> = (props: OwnProps) => {
+const Card: React.FC<OwnsProps> = props => {
   return (
-    <div className="card">
+    <div className="card" onClick={() => props.onClick()}>
       <img src={props.img} alt={props.title} />
       <p>{props.title}</p>
     </div>

@@ -2,11 +2,11 @@ import React from 'react';
 // local
 import './header.scss';
 
-type OwnsProps = {
+interface OwnsProps {
   title: string;
-};
+}
 
-const Header: React.FC<OwnsProps> = (props: OwnsProps) => {
+const Header: React.FC<OwnsProps> = props => {
   return (
     <div id="header">
       <h1>{props.title}</h1>

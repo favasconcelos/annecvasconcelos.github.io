@@ -1,18 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Router } from '@reach/router';
+
 //local
 import HomePage from './pages/home-page';
 import ProjectPage from './pages/project-page';
 
-const App: React.FC = () => {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={HomePage} />;
-        <Route path="/project/:id" component={ProjectPage} />;
-      </Switch>
-    </BrowserRouter>
+    <Router>
+      <HomePage path="/" />
+      <ProjectPage path="/project/:projectID" />
+    </Router>
   );
-};
-
-export default App;
+}

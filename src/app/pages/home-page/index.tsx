@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { RouteComponentProps, navigate } from '@reach/router';
 //local
+import './home-page.scss';
 import Page from '../../component/page';
-import ProjectList from '../../component/project-list';
+import Card from '../../component/card';
+import { Project } from '../../component/project-view/type';
+import { PROJECTS, getProjectURL } from '../../services/projects';
 
-const Home: React.FC = () => {
+interface OwnsProps extends RouteComponentProps {}
+
+const HomePage: React.FC<OwnsProps> = () => {
+  const onClick = useCallback(title => {
+    navigate(`project/${getProjectURL(title)}`);
+  }, []);
+
   return (
-    <Page id="home" title="Home">
-      <ProjectList />
+    <Page title="Home">
+      <div id="projects">
+        {PROJECTS.map((project: Project) => (
+          <Card key={project.title} img={project.mainImage} title={project.title} onClick={() => onClick(project.title)} />
+        ))}
+      </div>
     </Page>
   );
 };
 
-export default Home;
+export default HomePage;
