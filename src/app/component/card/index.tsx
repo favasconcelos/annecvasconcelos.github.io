@@ -1,15 +1,17 @@
 import React from 'react';
 //local
 import './card.scss';
-import imgGallery from '../../../_assets/gallery.jpg';
 
-type OwnProps = {};
+type OwnProps = {
+  img: string;
+  title: string;
+};
 
-const Card: React.FC = (props: OwnProps) => {
+const Card: React.FC<OwnProps> = (props: OwnProps) => {
   return (
     <div className="card">
-      <img src={imgGallery} alt="lala" />
-      <p className="desc">Recusandae optio nostrum quod.</p>
+      <img src={props.img} alt={props.title} />
+      <p>{props.title}</p>
     </div>
   );
 };

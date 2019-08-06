@@ -2,10 +2,14 @@ import React from 'react';
 // local
 import './header.scss';
 
-const Header: React.FC = () => {
+type OwnsProps = {
+  title: string;
+};
+
+const Header: React.FC<OwnsProps> = (props: OwnsProps) => {
   return (
     <div id="header">
-      <h1>Nome</h1>
+      <h1>{props.title}</h1>
     </div>
   );
 };
