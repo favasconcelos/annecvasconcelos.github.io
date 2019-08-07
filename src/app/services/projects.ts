@@ -1,5 +1,5 @@
 import imgGalery from '../../_assets/gallery.jpg';
-import { Project } from '../component/project-view/type';
+import { Project, SectionType } from '../component/project-view/type';
 
 export const PROJECTS: Project[] = [
   {
@@ -8,6 +8,12 @@ export const PROJECTS: Project[] = [
     mainImage: 'http://be.beantownthemes.com/html/theme/images/home_betheme_portfolio_post_1.jpg',
     description: 'Project developed to present one of the cultural heritage of the city of Recife, the "Brega".',
     tags: ['museum', 'history'],
+    sections: [
+      {
+        type: SectionType.TYPE_1,
+        images: [],
+      },
+    ],
   },
   {
     title: 'Dacraena tattoo gallery',
