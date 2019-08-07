@@ -2,8 +2,8 @@
 export interface Project {
   title: string;
   year: number;
-  mainImage: string;
-  images?: string[];
+  image: string;
+  document?: string;
   description?: string;
   tags?: string[];
   sections?: Section[];
@@ -11,12 +11,15 @@ export interface Project {
 
 export interface Section {
   type: SectionType;
-  images: string[];
+  images: Image[];
 }
 
 export enum SectionType {
-  TYPE_1 = 'type_1',
-  TYPE_2 = 'type_2',
-  TYPE_3 = 'type_3',
-  TYPE_4 = 'type_4',
+  TYPE_1 = 'section1',
+  TYPE_2 = 'section2',
+}
+
+export interface Image {
+  src: string;
+  label?: string;
 }

@@ -6,12 +6,12 @@ interface OwnsProps {
   title: string;
 }
 
-const Header: React.FC<OwnsProps> = props => {
+const HeaderComponent: React.FC<OwnsProps> = ({ title }) => {
   return (
     <div id="header">
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
     </div>
   );
 };
 
-export default Header;
+export default HeaderComponent;

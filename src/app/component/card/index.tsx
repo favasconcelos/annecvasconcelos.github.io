@@ -8,13 +8,13 @@ type OwnsProps = {
   onClick: Function;
 };
 
-const Card: React.FC<OwnsProps> = props => {
+const CardComponent: React.FC<OwnsProps> = ({ img, title, onClick }) => {
   return (
-    <div className="card" onClick={() => props.onClick()}>
-      <img src={props.img} alt={props.title} />
-      <p>{props.title}</p>
+    <div className="card" onClick={() => onClick()}>
+      <img src={img} alt={title} />
+      <p>{title}</p>
     </div>
   );
 };
 
-export default Card;
+export default CardComponent;

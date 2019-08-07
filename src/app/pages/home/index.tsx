@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
+import uuid from 'uuid';
 import { RouteComponentProps, navigate } from '@reach/router';
 //local
-import './home-page.scss';
-import Page from '../../component/page';
-import Card from '../../component/card';
-import { Project } from '../../component/project-view/type';
+import './homepage.scss';
+import PageComponent from '../../component/page';
+import CardComponent from '../../component/card';
 import { PROJECTS, getProjectURL } from '../../services/projects';
 
 interface OwnsProps extends RouteComponentProps {}
@@ -15,13 +15,13 @@ const HomePage: React.FC<OwnsProps> = () => {
   }, []);
 
   return (
-    <Page title="Home">
+    <PageComponent title="Home">
       <div id="projects">
-        {PROJECTS.map((project: Project) => (
-          <Card key={project.title} img={project.mainImage} title={project.title} onClick={() => onClick(project.title)} />
+        {PROJECTS.map(({ title, image }) => (
+          <CardComponent key={uuid.v4()} img={image} title={title} onClick={() => onClick(title)} />
         ))}
       </div>
-    </Page>
+    </PageComponent>
   );
 };
 

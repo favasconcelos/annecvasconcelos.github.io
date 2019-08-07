@@ -1,31 +1,34 @@
 import React from 'react';
+import uuid from 'uuid';
 //local
 import './project.scss';
 import { Project } from './type';
+import ImagesComponent from '../images';
 
 type OwnsProps = {
-  data: Project;
+  project: Project;
 };
 
-const ProjectView: React.FC<OwnsProps> = props => {
-  const project = props.data;
+const ProjectComponent: React.FC<OwnsProps> = ({ project }) => {
   return (
     <div id="project">
-      <div id="images">
-        <img src={project.mainImage} alt={project.title} />
-      </div>
+      <ImagesComponent sections={project.sections} />
       <div id="description">
         <p>{project.description}</p>
-
         <p className="title">Date:</p>
         <p>May 13, 2017</p>
-
+        <p className="title">Document:</p>
+        <p>
+          <a href={project.document} target="_blank" rel="nofollow">
+            Project PDF
+          </a>
+        </p>
         {project.tags && (
           <>
             <p className="title">Tags:</p>
             <p className="tags">
               {project.tags.map(tag => (
-                <span key={tag}>{tag}</span>
+                <span key={uuid.v4()}>{tag}</span>
               ))}
             </p>
           </>
@@ -35,4 +38,4 @@ const ProjectView: React.FC<OwnsProps> = props => {
   );
 };
 
-export default ProjectView;
+export default ProjectComponent;

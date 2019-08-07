@@ -1,20 +1,20 @@
 import React, { ReactNode } from 'react';
 //local
 import './page.scss';
-import Header from '../header';
+import HeaderComponent from '../header';
 
 interface OwnsProps {
   title: string;
   children?: ReactNode;
 }
 
-const Page: React.FC<OwnsProps> = props => {
+const PageComponent: React.FC<OwnsProps> = ({ title, children }) => {
   return (
     <div className="page">
-      <Header title={props.title} />
-      <div id="body">{props.children}</div>
+      <HeaderComponent title={title} />
+      <div id="body">{children}</div>
     </div>
   );
 };
 
-export default Page;
+export default PageComponent;

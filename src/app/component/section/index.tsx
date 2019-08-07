@@ -1,58 +1,22 @@
 import React from 'react';
+import uuid from 'uuid';
 // local
-import './section.scss';
-import { Section, SectionType } from '../project-view/type';
-
-interface SectionListProps {
-  sections: Section[];
-}
-
-const SectionList: React.FC<SectionListProps> = props => {
-  return (
-    <div id="sections">
-      {props.sections.map(section => {
-        switch (section.type) {
-          case SectionType.TYPE_1:
-            return <Section1 section={section} />;
-          case SectionType.TYPE_2:
-            return <Section2 section={section} />;
-          case SectionType.TYPE_3:
-            return <Section3 section={section} />;
-        }
-      })}
-    </div>
-  );
-};
+import { Section } from '../project/type';
+import ImageComponent from '../image';
 
 interface SectionProps {
+  className: string;
   section: Section;
 }
 
-const Section1: React.FC<SectionProps> = props => {
-  const image = props.section.images[0];
+const SectionComponent: React.FC<SectionProps> = ({ className, section }) => {
   return (
-    <div className="section1">
-      <img src={image} alt="" />
+    <div className={className}>
+      {section.images.map(image => (
+        <ImageComponent key={uuid.v4()} image={image} />
+      ))}
     </div>
   );
 };
 
-const Section2: React.FC<SectionProps> = props => {
-  const image1 = props.section.images[0];
-  const image2 = props.section.images[1];
-  return (
-    <div className="section2">
-      <img src={image1} alt="" />
-      <img src={image2} alt="" />
-    </div>
-  );
-};
-
-const Section2: React.FC<SectionProps> = props => {
-  const image = props.section.images[0];
-  return (
-    <div className="section1">
-      <img src={image} alt="" />
-    </div>
-  );
-};
+export default SectionComponent;
