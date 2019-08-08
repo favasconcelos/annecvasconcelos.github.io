@@ -1,26 +1,24 @@
-import React, { useCallback } from 'react';
-import uuid from 'uuid';
-import { RouteComponentProps, navigate } from '@reach/router';
+import React from 'react';
+import { RouteComponentProps } from '@reach/router';
 //local
-import './homepage.scss';
+import './home.scss';
 import PageComponent from '../../component/page';
-import CardComponent from '../../component/card';
-import { PROJECTS, getProjectURL } from '../../services/projects';
+import GalleryComponent from '../../component/gallery';
 
 interface OwnsProps extends RouteComponentProps {}
 
 const HomePage: React.FC<OwnsProps> = () => {
-  const onClick = useCallback(title => {
-    navigate(`project/${getProjectURL(title)}`);
-  }, []);
-
   return (
-    <PageComponent title="Home">
-      <div id="projects">
-        {PROJECTS.map(({ title, image }) => (
-          <CardComponent key={uuid.v4()} img={image} title={title} onClick={() => onClick(title)} />
-        ))}
+    <PageComponent id="home" title="Home">
+      <div className="section idea">
+        <h3>Make your house creative and unique</h3>
+        <p>
+          Erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+          dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+          praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
       </div>
+      <GalleryComponent />
     </PageComponent>
   );
 };

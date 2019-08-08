@@ -1,0 +1,18 @@
+#top-header {
+  background-color: #23252d;
+  height: 32px;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 100;
+  letter-spacing: 0.6px;
+
+  #top-header-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

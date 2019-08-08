@@ -1,16 +1,32 @@
-#header {
+.header {
+  position: relative;
   width: 100%;
-  height: 6em;
-  background: #f7f7f7;
-  border-bottom: 1px solid #999;
+  height: calc(100vh - 32px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('http://w.themedemo.co/coca-html/assets/images/banner-05.jpg');
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .header-menu {
+    position: sticky;
+    top: 0;
+    left: 0;
 
-  h1 {
-    font-family: 'Raleway', sans-serif;
-    font-style: italic;
-    font-weight: 300;
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    padding: 0 32px;
+    background-color: rgba(255, 255, 255, 0.5);
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+
+    &.fixed {
+      color: #000;
+    }
   }
 }

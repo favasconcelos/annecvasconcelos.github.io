@@ -3,7 +3,6 @@ import uuid from 'uuid';
 //local
 import './project.scss';
 import { Project } from './type';
-import ImagesComponent from '../images';
 
 type OwnsProps = {
   project: Project;
@@ -12,7 +11,6 @@ type OwnsProps = {
 const ProjectComponent: React.FC<OwnsProps> = ({ project }) => {
   return (
     <div id="project">
-      <ImagesComponent sections={project.sections} />
       <div id="description">
         <p>{project.description}</p>
         <p className="title">Date:</p>

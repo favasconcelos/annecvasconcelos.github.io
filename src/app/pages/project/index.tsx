@@ -18,7 +18,7 @@ const ProjectPage: React.FC<OwnsProps> = ({ projectID }) => {
 
   const title = `${project.title} (${project.year})`;
   return (
-    <PageComponent title={title}>
+    <PageComponent id="project" title={title}>
       <ProjectComponent project={project} />
     </PageComponent>
   );

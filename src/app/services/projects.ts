@@ -1,4 +1,4 @@
-import imgGalery from '../../_assets/gallery.jpg';
+// import imgGalery from '../../_assets/gallery.jpg';
 import { Project, SectionType } from '../component/project/type';
 // images
 import brega01 from '../../_assets/projects/museum_brega/img01.jpg';
@@ -33,26 +33,6 @@ export const PROJECTS: Project[] = [
         images: [{ src: brega05 }],
       },
     ],
-  },
-  {
-    title: 'Dacraena tattoo gallery',
-    year: 2016,
-    image: imgGalery,
-  },
-  {
-    title: 'Loft - Studio 54',
-    year: 2017,
-    image: imgGalery,
-  },
-  {
-    title: 'Water Square',
-    year: 2017,
-    image: imgGalery,
-  },
-  {
-    title: 'Multifamily Residential',
-    year: 2017,
-    image: imgGalery,
   },
 ];
 
