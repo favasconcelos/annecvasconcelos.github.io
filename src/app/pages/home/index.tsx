@@ -2,10 +2,10 @@ import React from 'react';
 import { RouteComponentProps } from '@reach/router';
 //local
 import './home.scss';
-import PageComponent from '../../component/page';
-import GalleryComponent from '../../component/gallery';
+import PageComponent from 'app/component/page';
+import GalleryComponent from 'app/component/gallery';
 
-interface OwnsProps extends RouteComponentProps {}
+interface OwnsProps extends RouteComponentProps { }
 
 const HomePage: React.FC<OwnsProps> = () => {
   return (

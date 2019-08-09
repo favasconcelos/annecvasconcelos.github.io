@@ -5,3 +5,11 @@ export enum GalleryOptions {
   KITCHEN = 'kitchen',
   LIVINGROOM = 'livingroom',
 }
+
+export interface GalleryImages {
+  id: string;
+  src: string;
+  title: string;
+  description: string;
+  options: GalleryOptions[]
+}

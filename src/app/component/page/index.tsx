@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 //local
 import './page.scss';
-import TopHeaderComponent from '../topheader';
-import HeaderComponent from '../header';
+import TopHeaderComponent from 'app/component/topheader';
+import HeaderComponent from 'app/component/header';
 
 interface OwnsProps {
   id: string;
