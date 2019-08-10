@@ -10,7 +10,7 @@
     "@types/reach__router": "1.2.4",
     "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
-    "@types/react-transition-group": "^4.2.2",
+    "@types/react-transition-group": "4.2.2",
     "@types/uuid": "3.4.5",
     "node-sass": "4.12.0",
     "react": "16.9.0",
