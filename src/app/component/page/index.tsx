@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 import './page.scss';
 import TopHeaderComponent from 'app/component/topheader';
 import HeaderComponent from 'app/component/header';
+import FooterComponent from 'app/component/footer';
 
 interface OwnsProps {
   id: string;
@@ -16,6 +17,7 @@ const PageComponent: React.FC<OwnsProps> = ({ id, title, children }) => {
       <TopHeaderComponent />
       <HeaderComponent title={title} />
       <div id="body">{children}</div>
+      <FooterComponent />
     </div>
   );
 };

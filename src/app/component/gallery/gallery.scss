@@ -14,7 +14,6 @@
       cursor: pointer;
       padding: 4px 4px;
 
-
       &:after {
         content: '';
         display: block;
@@ -22,9 +21,10 @@
         height: 1px;
         width: 0px;
         background: transparent;
-        transition: width .5s ease, background-color .5s ease;
+        transition: width 0.5s ease, background-color 0.5s ease;
       }
-      &.active:after ,&:hover:after {
+      &.active:after,
+      &:hover:after {
         width: 100%;
         background-color: rgba(56, 60, 80, 0.8);
       }
@@ -39,7 +39,7 @@
     align-items: flex-start;
     padding: 32px 0;
     margin-left: -16px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     .item {
       width: 30%;

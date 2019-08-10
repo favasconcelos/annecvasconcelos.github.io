@@ -8,7 +8,6 @@ import { IMAGES, filterByOption } from 'app/services/gallery';
 const GalleryComponent: React.FC = () => {
   const [option, setOption] = useState(GalleryOptions.ALL);
   const onClick = useCallback((value) => setOption(value), []);
-
   const images = filterByOption(IMAGES, option);
 
   return (
