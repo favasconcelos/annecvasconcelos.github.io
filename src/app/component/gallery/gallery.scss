@@ -32,14 +32,13 @@
   }
 
   .images {
-    min-height: 850px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
     padding: 32px 0;
     margin-left: -16px;
-    transition: all 0.5s ease;
+    // transition: all 0.5s ease;
 
     .item {
       width: 30%;
@@ -58,17 +57,41 @@
   }
 }
 
-.item-enter {
+// .item-enter {
+//   opacity: 0;
+//   transform: scale(0);
+//   z-index: 1;
+// }
+// .item-enter-active {
+//   opacity: 1;
+//   transform: scale(1);
+//   transition: opacity 300ms linear 100ms, transform 300ms ease-in-out 100ms;
+// }
+// .item-exit {
+//   opacity: 1;
+//   transform: scale(1);
+// }
+// .item-exit-active {
+//   opacity: 0;
+//   transform: scale(0);
+//   transition: opacity 100ms linear, transform 150ms ease-out;
+// }
+
+.fade-enter {
+  max-height: 0;
   opacity: 0;
 }
-.item-enter-active {
+.fade-enter-active {
+  max-height: 260px;
   opacity: 1;
-  transition: all 500ms ease-in;
+  transition: all 500ms;
 }
-.item-exit {
+.fade-exit {
+  max-height: 260px;
   opacity: 1;
 }
-.item-exit-active {
+.fade-exit-active {
+  max-height: 0;
   opacity: 0;
-  transition: all 250ms ease-out;
+  transition: all 500ms;
 }
