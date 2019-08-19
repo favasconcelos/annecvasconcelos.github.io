@@ -18,7 +18,7 @@
     "react-scripts": "3.1.1",
     "react-transition-group": "4.2.2",
     "typescript": "3.5.3",
-    "uuid": "3.3.2"
+    "uuid": "3.3.3"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "1.7.0",
