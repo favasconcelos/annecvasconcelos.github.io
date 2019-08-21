@@ -21,7 +21,7 @@
     "uuid": "3.3.3"
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "1.7.0",
+    "eslint-plugin-react-hooks": "2.0.0",
     "gh-pages": "2.1.1",
     "husky": "3.0.4",
     "lint-staged": "9.2.3",
