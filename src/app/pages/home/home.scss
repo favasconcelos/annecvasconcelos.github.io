@@ -23,3 +23,19 @@
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  #home {
+    .idea {
+      flex-flow: row wrap;
+      h3 {
+        flex-basis: 100%;
+        margin-bottom: 8px;
+      }
+      p {
+        padding-left: 0;
+        margin-top: 8px;
+      }
+    }
+  }
+}

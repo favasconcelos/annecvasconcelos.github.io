@@ -4,7 +4,7 @@
   .options {
     list-style: none;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     li {
@@ -38,7 +38,6 @@
     align-items: flex-start;
     padding: 32px 0;
     margin-left: -16px;
-    // transition: all 0.5s ease;
 
     .item {
       width: 30%;
@@ -57,26 +56,6 @@
   }
 }
 
-// .item-enter {
-//   opacity: 0;
-//   transform: scale(0);
-//   z-index: 1;
-// }
-// .item-enter-active {
-//   opacity: 1;
-//   transform: scale(1);
-//   transition: opacity 300ms linear 100ms, transform 300ms ease-in-out 100ms;
-// }
-// .item-exit {
-//   opacity: 1;
-//   transform: scale(1);
-// }
-// .item-exit-active {
-//   opacity: 0;
-//   transform: scale(0);
-//   transition: opacity 100ms linear, transform 150ms ease-out;
-// }
-
 .fade-enter {
   max-height: 0;
   opacity: 0;
@@ -94,4 +73,15 @@
   max-height: 0;
   opacity: 0;
   transition: all 500ms;
+}
+
+@media screen and (max-width: 425px) {
+  #gallery {
+    .images {
+      .item {
+        width: 90%;
+        flex: 0 0 calc(90% - 16px);
+      }
+    }
+  }
 }
