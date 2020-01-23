@@ -36,6 +36,9 @@
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
+  "engines": {
+    "node": "v12.14.1"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
